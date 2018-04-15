@@ -1,0 +1,13 @@
+<div *ngIf="survey" class="row">
+  <div class="col-xs-12 col-md-8 offset-md-2">
+    <h2 class="head text-center">Start {{survey.title}} Survey</h2>
+    <p>Welcome to {{survey.title}} questionnaire.<br/>
+      You will be asked {{survey.questions.length}} questions.<br/>
+      And finally, you will get a pie chart as a result.<br/><br/>
+      Best regards.
+    </p>
+    <div class="form-buttons text-center">
+      <button type="button" class="btn btn-info" (click)="start()">Start<i class="fa fa-play" style="margin-left: 10px" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>

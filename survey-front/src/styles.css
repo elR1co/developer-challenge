@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+}
+
+body {
+  background-color: #D8E4E5;
+}

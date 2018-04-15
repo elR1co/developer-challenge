@@ -1,0 +1,66 @@
+.nav>li a {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.my-navbar {
+  background: #EAECDE;
+  border-bottom: 1px solid #C9C2BA;
+  border-radius: 25px 25px 0 0;
+}
+
+.liner {
+  height: 2px;
+  background: #C5D0D1;
+  position: absolute;
+  width: 66%;
+  top: 55px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+span.round-tabs {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  line-height: 70px;
+  display: inline-block;
+  border-radius: 100px;
+  background: #fff;
+  z-index: 2;
+  text-align: center;
+  font-size: 25px;
+}
+
+span.round-tabs.start {
+  color: #F3A712;
+  border: 2px solid #F3A712;
+}
+
+a.active span.round-tabs.start {
+  background: #F3A712;
+  color: white;
+}
+
+span.round-tabs.questions {
+  color: #A8C686;
+  border: 2px solid #A8C686;
+}
+
+a.active span.round-tabs.questions {
+  background: #A8C686;
+  color: white;
+}
+
+span.round-tabs.result {
+  color: #669BBC;
+  border: 2px solid #669BBC;
+}
+
+a.active span.round-tabs.result {
+  background: #669BBC;
+  color: white;
+}

@@ -1,0 +1,30 @@
+<form #questionsForm="ngForm" novalidate>
+  <div *ngFor="let question of questions; let index = index" [hidden]="!isCurrentStep(index)">
+    <h2 class="head text-center">{{index+1}}/{{questions.length}} - {{question.title}}</h2>
+    <div *ngIf="validationError" class="alert alert-danger" role="alert">Please select an answer.</div>
+    <fieldset class="form-group">
+      <div class="row">
+        <div class="col-xs-12 col-md-5 offset-md-1" *ngFor="let proposedAnswer of question.proposedAnswers">
+          <div class="my-form-check">
+            <label class="form-check-label col-form-label">
+              <input class="form-check-input" type="radio" name="{{proposedAnswer.id}}" [(ngModel)]="answers[question.id]" [value]="proposedAnswer.id">
+              {{proposedAnswer.text}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <div class="form-buttons text-center">
+    <button *ngIf="!isFirstStep()" type="button" class="btn btn-primary" (click)="back()"><i class="fa fa-long-arrow-left" style="margin-right: 10px" aria-hidden="true"></i>Previous</button>
+    <div *ngIf="isLastStep(); then truthyTemplate else falsyTemplate"></div>
+
+    <ng-template #truthyTemplate >
+      <button type="button" class="btn btn-success" (click)="submit()">Submit<i class="fa fa-pie-chart" style="margin-left: 10px" aria-hidden="true"></i></button>
+    </ng-template>
+
+    <ng-template #falsyTemplate>
+      <button type="button" class="btn btn-info" (click)="next()">Next<i class="fa fa-long-arrow-right" style="margin-left: 10px" aria-hidden="true"></i></button>
+    </ng-template>
+  </div>
+</form>
