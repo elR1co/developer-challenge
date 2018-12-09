@@ -1,5 +1,9 @@
 # Developer Challenge
 
+## Description
+
+The goal is to create a web application to make a political survey. Based on user's answers, propose a simple algorithm to determine the user political leanings. The development language to use is free. This was part of a recruitment process for a Switzerland company, done in November 2017. As data model, you will take this [photograph](https://informationisbeautiful.net/visualizations/left-vs-right-us/).  
+
 ## Deploy
 ```
 # Build the project and docker images
